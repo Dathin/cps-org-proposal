@@ -11,7 +11,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "tsdx watch --onSuccess \"node dist/index.js\"",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
@@ -51,5 +51,9 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "apollo-server": "^2.21.2",
+    "graphql": "^15.5.0"
   }
 }
