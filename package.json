@@ -15,6 +15,13 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "migration:add": "sequelize migration:generate",
+    "migration:run": "sequelize db:migrate",
+    "migration:rollback": "sequelize db:migrate:undo",
+    "seed:add": "sequelize seed:generate",
+    "seed:run": "sequelize db:seed:all",
+    "seed:rollback": "sequelize db:seed:undo",
+    "sequelize:test": "sequelize init",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
@@ -46,16 +53,23 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.10.1",
+    "@types/node": "^14.14.37",
+    "@types/sequelize": "^4.28.9",
+    "@types/validator": "^13.1.3",
     "husky": "^5.2.0",
+    "sequelize-cli": "^6.2.0",
     "size-limit": "^4.10.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
-    "typescript": "^4.2.3",
-    "@types/sequelize": "^4.28.9"
+    "typescript": "^4.2.3"
   },
   "dependencies": {
     "@graphql-tools/merge": "^6.2.11",
     "apollo-server": "^2.21.2",
-    "graphql": "^15.5.0"
+    "graphql": "^15.5.0",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.6.2",
+    "sequelize-typescript": "^2.1.0"
   }
 }

@@ -9,6 +9,7 @@
     "rootDir": "./src",
     "strict": true,
     "noImplicitReturns": true,
+    "target": "es6",
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -17,5 +18,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true
   }
 }
