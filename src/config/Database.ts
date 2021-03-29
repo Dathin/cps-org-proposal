@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize-typescript";
-import models from "../model";
+import * as path from "path";
 
 
 export default class Database {
@@ -19,7 +19,8 @@ export default class Database {
           idle: 200000,
           acquire: 200000,
         },
-        models
+        // models
+        modelPaths: [path.resolve(__dirname, '../model/pedro')]
       });
     }
   

@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    queryInterface.createTable('Person', {
+    queryInterface.createTable('pedro', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,6 +11,8 @@ module.exports = {
         underscore: true
       },
       name: Sequelize.STRING,
+      createdAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE,
       isBetaMember: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
@@ -20,6 +22,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    queryInterface.dropTable('Person')
+    queryInterface.dropTable('pedro')
   }
 };
